@@ -1,0 +1,86 @@
+.banner {
+    padding: 20px 0 206px;
+    background: #f5f5f7 url('../image/bg-mob.jpg') bottom/320px no-repeat;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner_title {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.banner__subtitle {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+}
+
+.banner__timer {
+    margin-bottom: 36px;
+}
+
+.banner__button {
+    border: 1px solid #70A5D5;
+    border-radius: 32px;
+    padding: 16px 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%
+}
+
+@media (min-width: 768px) {
+    .banner {
+        padding: 60px 0 90px;
+        background: url('../image/bg-tab.jpg');
+        background-position: center;
+        background-size: contain;
+    }
+
+    .banner__content {
+        max-width: 331px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .banner {
+        padding: 120px 0 160px;
+        background: url('../image/bg-lap.jpg');
+    }
+
+    .banner__content {
+        max-width: 510px;
+    }
+
+    .banner_title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .banner__subtitle {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .banner__timer {
+        margin-bottom: 56px;
+    }
+
+    .banner__button {
+        font-size: 16px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .banner {
+        background: url('../image/bg.jpg');
+    }
+}
