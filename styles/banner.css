@@ -53,6 +53,7 @@
     .banner {
         padding: 120px 0 160px;
         background: url('../image/bg-lap.jpg');
+        margin-bottom: 70px;
     }
 
     .banner__content {

@@ -9,7 +9,10 @@
     <link rel="icon" href="image/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="image/favicon.pmg" type="image/pmg">
 
+    <link rel="stylesheet" href="lib/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/index.css">
+
+    <script src="scripts/index.js" type="module"></script>
 </head>
 
 <body>
@@ -83,16 +86,16 @@
                 <h2 class="goods__title">Все продукты новой линейки</h2>
 
                 <div class="goods__helper">
-                    <div class="goods__block">
-                        <ul class="goods__list">
+                    <div class="goods__block swiper">
+                        <ul class="goods__list swiper-wrapper">
     
-                            <li class="goods__item">
+                            <li class="goods__item swiper-slide">
                                 <article class="goods__product product">
                                     <div class="product__image-wrapper">
                                         <img src="image/iPhone14-pro.png" alt="iPhone14-pro" class="product__image" width="200" height="200">
                                     </div>
                                         <div class="product__info">
-                                            <h3 class="product__titile">iPhone 14 PRO</h3>
+                                            <h3 class="product__title">iPhone 14 PRO</h3>
                                             <p class="product__price">$1050</p>
                                         </div>
     
@@ -101,14 +104,14 @@
                                 </article>
                             </li>
     
-                            <li class="goods__item">
+                            <li class="goods__item swiper-slide">
                                 <article class="goods__product product">
                                     <div class="product__image-wrapper">
                                         <img src="image/iPhone14.png" alt="iPhone14" class="product__image" width="200" height="200">
                                     </div>
     
                                         <div class="product__info">
-                                            <h3 class="product__titile">iPhone 14</h3>
+                                            <h3 class="product__title">iPhone 14</h3>
                                             <p class="product__price">$799</p>
                                         </div>
     
@@ -116,13 +119,13 @@
                                 </article>
                             </li>
     
-                            <li class="goods__item">
+                            <li class="goods__item swiper-slide">
                                 <article class="goods__product product">
                                     <div class="product__image-wrapper">
                                         <img src="image/AirPodsPro.png" alt="AirPods Pro" class="product__image" width="200" height="200">
                                     </div>
                                         <div class="product__info">
-                                            <h3 class="product__titile">AirPods Pro</h3>
+                                            <h3 class="product__title">AirPods Pro</h3>
                                             <p class="product__price">$249</p>
                                         </div>
     
@@ -130,12 +133,40 @@
                                     
                                 </article>
                             </li>
+
+                            <li class="goods__item swiper-slide">
+                                <article class="goods__product product">
+                                    <div class="product__image-wrapper">
+                                        <img src="image/apple_watch_ultra.png" alt="Apple Watch Ultra" class="product__image" width="200" height="200">
+                                    </div>
+                                        <div class="product__info">
+                                            <h3 class="product__title">Apple Watch Ultra</h3>
+                                            <p class="product__price">$799</p>
+                                        </div>
+    
+                                        <button class="product__more">Узнать больше</button>
+                                    
+                                </article>
+                            </li>
+
+                            <li class="goods__item swiper-slide">
+                                <article class="goods__product product">
+                                    <div class="product__image-wrapper">
+                                        <img src="image/apple-watch-series-8.png" alt="Apple Watch Series 8" class="product__image" width="200" height="200">
+                                    </div>
+                                        <div class="product__info">
+                                            <h3 class="product__title">Apple Watch Series 8</h3>
+                                            <p class="product__price">$399</p>
+                                        </div>
+    
+                                        <button class="product__more">Узнать больше</button>
+                                    
+                                </article>
+                            </li>
                         </ul>
-    
-                        <button class="goods__arrow goods__arrow_prev"></button>
-                        <button class="goods__arrow goods__arrow_next"></button>
-    
                     </div>
+                    <button class="goods__arrow goods__arrow_prev"></button>
+                    <button class="goods__arrow goods__arrow_next"></button>
                 </div>
             </div>
         </section>
@@ -144,7 +175,7 @@
             <div class="container">
                 <p class="features__tagline">Мы становимся лучше. Для вас</p>
 
-                <h2 class="features__title">Характеристики iPhone 14</h2>
+                <h2 class="features__title">Характеристики iPhone&nbsp;14</h2>
 
                 <div class="features__wrapper">
                     <img src="image/iPhone.png" alt="iPhone" class="features__image">
@@ -178,7 +209,7 @@
                 <img src="image/logo-w.svg" alt="logo-apple" class="footer__logo">
 
                 <div class="footer__navigation">
-                    <ul class="navigation__list">
+                    <ul class="navigation__list navigation__list_column-mob">
                         <li class="navigation__item">
                             <a href="#goods" class="navigation__link">Продукты</a>
                         </li>
