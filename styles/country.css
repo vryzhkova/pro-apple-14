@@ -47,9 +47,24 @@
     font-size: 14px;
 }
 
+.country__track {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    width: 4px;
+}
+
+.country__scrollbar {
+    background-color: #ECECEC;
+    border-radius: 2px;
+}
+
 @media (min-width: 1024px) {
     .counrty__list {
-        max-height: 106px;
+        max-height: 120px;
     }
 
     .country__choice {
