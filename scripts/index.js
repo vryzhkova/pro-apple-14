@@ -126,6 +126,57 @@ countryWrapper.addEventListener('click', ({target}) => {
     }
 })
 
+// Timer
+
+const declOfNum = (n, titles) => titles[n % 10 === 1 && n % 100 !== 11 ?
+    0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2];
+
+const timer = (deadline) => {
+    const unitDay = document.querySelector('.timer__unit_day');
+    const unitHours = document.querySelector('.timer__unit_hours');
+    const unitMin = document.querySelector('.timer__unit_min');
+    const descriptionDay = document.querySelector('.timer__unit-description_day');
+    const descriptionHour = document.querySelector('.timer__unit-description_hour');
+    const descriptionMin = document.querySelector('.timer__unit-description_min');
+
+    const getTimeRemaining = () => {
+        const dateStop = new Date(deadline).getTime();
+        const dateNow = Date.now();
+        const timeRemaining = dateStop - dateNow;
+
+        const minutes = Math.floor((timeRemaining / 1000 /60) % 60);
+        const hours = Math.floor((timeRemaining / 1000 / 60 / 60) % 24);
+        const days = Math.floor(timeRemaining / 1000 / 60 / 60 / 24 % 365); 
+
+        return {timeRemaining, minutes, hours, days};
+    };
+
+    const start = () => {
+        const timer = getTimeRemaining();
+    
+        unitDay.textContent = timer.days;
+        unitHours.textContent = timer.hours;
+        unitMin.textContent = timer.minutes;
+
+        descriptionDay.textContent = declOfNum(timer.days, ['день', 'дня', 'дней']);
+        descriptionHour.textContent = declOfNum(timer.hours, ['час', 'часа', 'часов']);
+        descriptionMin.textContent = declOfNum(timer.minutes, ['минута', 'минуты', 'минут']);
+
+        const timerId = setTimeout(start, 60000);
+
+        if (timer.timeRemaining < 0) {
+            clearTimeout(timerId);
+            unitDay.textContent = '0';
+            unitHours.textContent = '0';
+            unitMin.textContent = '0';
+        }
+    }
+
+    start();
+}
+
+timer('2022/12/31 20:00');
+
 
 
 
